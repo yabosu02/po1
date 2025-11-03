@@ -1,0 +1,222 @@
+
+/*모달창*/
+#modal {
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 1000;
+    overflow:hidden; 
+   
+    display:none;
+    transition: all 1s;
+}
+#modal.open {
+    display:block;
+    transition: all 1s;
+}
+.modal-window {
+    position:fixed;
+    top:0;
+    height:0%;
+    opacity:0;
+    z-index: 1000;
+    color:white;
+    margin:0;
+    transition: all 1s;
+}
+.modal-window.open {
+    height:100%;
+    opacity:1;
+    transition: all 1s;
+}
+.modal-left{
+    background:linear-gradient(to right, #000,#121212,#111);
+    width:40%;
+    left:0;
+    transition: all 1s;
+/*    outline:5px solid white;*/
+}
+.modal-right{
+    background:linear-gradient(to right, #111,#1a1a1a);
+    width:60%;
+    right:0;
+    transition: all 1.2s;
+/*    outline:5px solid red;*/
+}
+
+/*modal-left***********************************/
+.left-container {
+    position:absolute;
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    transition: all 1s;
+}
+.social-container{
+/*    outline:5px solid aqua;*/
+    height:7rem;
+    color:white;
+    margin-top:15%;
+    margin-bottom:3rem;
+    text-align: center;
+}
+.social {
+    display: inline-block;
+    width:5rem;
+    height:5rem;
+    color:white;
+    border:4px solid white;
+    border-radius: 100%;
+    margin:1rem 1.5rem;
+    transition:all .2s;
+}
+.social:hover {
+    background-color:white;
+}
+.social:hover .sns {
+    color:black;
+}
+.sns {
+    color:white;
+    font-size:1.5rem;
+    line-height:5rem;
+    transition:all .2s;
+}
+#modal-logo {
+    display:block;
+    min-height:45px;
+    margin:1rem 0;
+    background:url(../img/common/logo-svg-w_notm.svg) no-repeat top center;
+/*    outline:2px solid turquoise;*/
+}
+#modal-imglogo {
+    display:block;
+    min-height:67px;
+    margin:1rem 0;
+    background:url(../img/common/yoga-logo-w.png) no-repeat top center;
+/*    outline:2px solid turquoise;*/
+}
+.address{
+/*    outline:5px solid yellow;*/
+    width:60%;
+    margin:2rem auto;
+    color:white;
+}
+.address a {
+    display: block;
+    color:white;
+    padding-top:1rem;
+    font-size:1.5rem;
+    letter-spacing: .1rem;
+}
+.square-white {
+    width:1.1rem;
+    height:1.1rem;
+    background-color:#fff;
+    display:block;
+    margin:2.5rem 0;
+}
+.address p {
+    line-height: 1.6rem;
+    letter-spacing:0.1rem;
+}
+.subscribe-form {
+/*    outline:2px solid yellow;*/
+    width:60%;
+    margin:0 auto;
+    color:white;
+}
+label {
+    position: relative;
+  display: inline-block;
+  letter-spacing: 4px;
+  padding-top:20px;
+  width:100%;
+}
+label .label-text {
+  color: #aaa;
+  cursor: text;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: Libre Baskerville-Regular, Helvetica, Helvetica Neue, Arial, sans-serif; 
+  transform: translateY(-40px);
+  text-indent:1.5rem;
+  transition: all 0.3s;
+  width:80%;
+}
+label input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #4a4a4a;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: -1px;
+  outline: 0;
+  padding: 5px 20px;
+  transition: all 0.3s;
+  width: 80%;
+}
+label input:focus {
+  max-width: 100%;
+  width: 400px;
+}
+label input:focus + .label-text {
+  color: #fff;
+  font-size: .6rem;
+  transform: translateY(-74px);
+}
+label input:valid + .label-text {
+  font-size: .6rem;
+  transform: translateY(-74px);
+}
+.subscribe-submit {
+    position: absolute;
+    top:22%;
+    right:3rem;
+    display:inline-block;
+    width:15%;
+    background: transparent;
+    border:none;
+    color:white;
+    font-size:2rem;
+}
+.subscribe-submit:hover {
+    color:turquoise;
+    animation:toRight 1.3s infinite; 
+}
+@keyframes toRight {
+    0% {right:3rem}
+    50% {right:2.3rem}
+    100% {right:2.99rem}
+}
+
+/*modal-right*********************************/
+.modal-right {
+    text-align: right;
+    transition: all 1s;
+}
+.modal-menu-container {
+    list-style: none;
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-30%, -50%);
+    transition: all 1s;
+}
+.modal-menu {
+    color:#fff;
+    font-size:6rem;
+    font-family: futura;
+    font-weight: bolder;
+    transition: all .2s ease-out;
+}
+.modal-menu-container:hover .modal-menu:not(:hover){
+    opacity:.1;
+}

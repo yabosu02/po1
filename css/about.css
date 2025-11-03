@@ -1,0 +1,608 @@
+body {
+  font-size: 62.5%/1.5;
+  font-family: Futura Medium, 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif } 
+/* 62.5% = 10px, 1.4em = 14px */
+
+/* Make the body 100% of the browser viewport height */
+html, body {
+  width:100vw;    
+  height: 100%;
+  margin: 0; 
+  font-size: 1vw;
+  user-select:none;
+}
+h1 {
+  font-size:9rem; 
+/*  outline:2px solid red;*/
+  line-height:7rem;
+  letter-spacing:-0.3rem;
+  margin-top: 3rem;
+  font-family: futura, 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif;
+  font-weight: bolder;
+}
+p {
+    font: 1.2rem Libre Baskerville-Regular, Helvetica, Helvetica Neue, Arial, sans-serif; color:#999;
+}
+a{
+    text-decoration: none;
+}
+img {
+    vertical-align: top;
+}
+
+
+
+/*로딩페이지*/
+#preLoader {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index: 1000;
+}
+#loader-logo{
+    display:block;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1001;
+/*    animation: loading 2s infinite linear;*/
+    animation: spin 2s infinite linear reverse;
+}
+/*
+@keyframes loading {
+  100% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(359deg);
+  }
+}
+*/
+
+
+.loader-section {
+    position:fixed;
+    top:0;
+    width:51%;
+    height:100%;
+    background:#000;
+    z-index: 1000;
+}
+.loader-section.section-left{
+    left:0;
+}
+.loader-section.section-right{
+    right:0;
+}
+
+/*Loaded ******************************************************/
+.loaded #preLoader .loader-section.section-left {
+    transform:translateX(-100%);
+    transition:all .8s .8s cubic-bezier(.645,.045,.355,1);
+}
+.loaded #preLoader .loader-section.section-right {
+    transform:translateX(100%);
+    transition:all .8s .8s cubic-bezier(.645,.045,.355,1);
+}
+.loaded #loader-logo {
+    opacity:0;
+    transition:all .6s ease-out;
+}
+.loaded #preLoader {
+    visibility: hidden;
+    transform:translateY(-100%);
+    transition:all .8s 1.6s ease-out;
+}
+
+/* modal.css linked*/
+
+
+/* header 항상 fixed, 슬라이드끝나면 url black으로 변경 */
+#nav-container {
+    position:fixed;
+    width:100%;
+    z-index: 998;
+}
+#header {
+    position:relative;
+    width:100%;
+    top:0;
+    height:5rem;
+    transition: all 1s cubic-bezier(.23,1,.32,1);
+}
+#header.open {
+    z-index: 9999;
+}
+#header #logo{
+    position:absolute;
+    min-width:325px;
+    min-height:45px;
+    top:53%;
+    transform:translateY(-50%);
+    left:2%;
+    background:url(../img/common/logo-svg-bk_notm.svg) no-repeat top left;
+    transition: all 1s cubic-bezier(.23,1,.32,1);
+/*    outline:1px solid grey;*/
+}
+#header #and-menu{
+    position:fixed;
+    min-width:34px;
+    min-height:39px;
+    top:5%;
+    transform:translateY(-50%);
+    right:3%;
+    background:url(../img/common/and-bk.svg) no-repeat top right;
+    transition: all 1s cubic-bezier(.23,1,.32,1);
+    z-index: 9999;
+/*    outline:1px solid grey;*/
+}
+
+/* 마우스휠 올려야지만 보이게 *****/
+#header.scroll {
+    background-color:#000;
+    height:3.8rem;
+}
+#header #logo.open {
+    opacity:0;
+}
+#header #and-menu.open { 
+    background:url(../img/common/and-w.svg) no-repeat top right;
+}
+#header #logo.scroll{
+    background:url(../img/common/logo-svg-w_notm.svg) no-repeat top left;
+}
+#header #and-menu.scroll{
+    background:url(../img/common/and-w.svg) no-repeat top right;
+    top:4%;
+}
+
+
+/* scrollable section**********************************/
+.content-wrapper {
+    overflow-x: hidden;
+    margin: 0 auto;
+    max-width: 100vw;
+    position: relative;
+    z-index: 2;
+}
+.project {
+    position:relative;
+    min-width:100vw;
+    min-height:90vh;/**/
+    margin: 0 auto;
+    padding:0 0 8rem;
+    border-bottom: 1px #ebebeb solid; /* project 끼리 나눠서볼수있게 하려고 임시로함*/
+    opacity: 0;
+    transition: all 1.5s cubic-bezier(.23,1,.32,1);
+}
+
+.project .square {
+    width:1.3rem;
+    height:1.3rem;
+    background-color:#000;
+    color:#000;
+    display:block;
+}
+
+/************** project 01 ******** HAPPY BODY */
+
+.bk, .wt {
+    line-height:8rem;
+    margin:0;
+    padding:0;
+    text-align: left;
+/*    outline:2px solid blue;*/
+}
+#project01 .main-wrapper {
+    position:relative;
+    width:100vw;
+    min-height:62rem;
+/*    border:2px solid tomato;*/
+}
+.bk {
+    position:absolute;
+    top:17rem;
+    left:50%;
+    transform:translateX(-50%);
+/*    outline:2px solid green;*/
+    color:black;
+}
+
+
+/*fade-in효과전*/
+
+
+#project01,
+#project02,
+#project05 {
+    transform:translateY(10rem);
+} 
+#project01.fade-in,
+#project02.fade-in,
+#project05.fade-in{
+    opacity: 1;
+    transform: translate(0);
+}
+#project03,
+#project06{
+    transform:translateX(-40rem);
+}
+#project03.fade-in,
+#project06.fade-in{
+    opacity: 1;
+    transform: translate(0);
+}
+#project04,
+#project07{
+    transform:translateX(40rem);
+}
+#project04.fade-in,
+#project07.fade-in{
+    opacity: 1;
+    transform: translate(0);
+}
+#project01 .img-wrapper {
+    position:relative;
+    width:64%;
+    margin-left:18%;
+    min-height:30rem;
+    top:25rem;
+    left:0;
+    margin-bottom:7rem;
+/*    outline:2px solid red;*/
+    overflow:hidden;
+    background:url(../img/about/fying.jpg) no-repeat top center;
+    background-size:auto;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.wt {
+    position:absolute;
+    top:-8rem;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+/*    outline:2px solid lime;*/
+    z-index: 2;
+}
+
+p {
+    color:#999;
+}
+#project01 .square-left {
+    position:relative;
+    left:20%;
+    transform:translateX(-50%);
+}
+.info-center {
+    max-width: 40vw;
+    font-size:1.1rem;
+    line-height:3rem;
+    text-align: right;
+    font-style: italic;
+    margin:5rem auto 5rem;
+    position:relative;
+/*    outline:2px solid crimson;*/
+}
+.info-center>span {
+    font-size:1.2rem;
+}
+
+/************** project 02 ******** title */
+#project02 {
+    width:100vw;
+    margin:0 auto;
+    padding-top:5rem;
+}
+#project02 h1 {
+    position:relative;
+    text-align: center;
+    z-index: 1;
+    margin:0;
+}
+#project02 .info1{
+    margin:1.5rem 0;
+    font-size:2.2rem;
+    position:relative;
+    z-index: 1;
+    text-align: center;
+    color:#999;
+    font-style: italic;
+}
+#project02 .square-center {
+    margin:10rem auto;
+}
+
+
+/* project03 strenghthen*/
+.project-wrapper {
+    width:100%;
+    position: relative;
+    min-height:50vh;
+    display: block;
+}
+.img-wrapper{
+    background-size:contain;
+    width:50vw;
+    height:30rem;
+    position:absolute;
+}
+#project03 .img-wrapper{
+    background:url(../img/about/1.Strengthens-Muscles.gif) no-repeat;
+    background-size:contain;
+    height:35rem;
+}
+.left-img, .left-text {
+    left:0;
+}    
+.right-img, .right-text {
+    left:0;
+}
+.text-wrapper {
+    background:white;
+    width:38vw;
+    position: absolute;
+    left:50%;
+    padding:2rem;
+    z-index: 2;
+    overflow: hidden;
+}
+.text-wrapper h2 {
+    font-family: futura;
+    line-height: 5rem;
+    font-size: 5rem;
+    padding:0;
+    margin:0;
+}
+.text-wrapper p {
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+}
+.info-detail:after, .shadow {
+    content:"";
+    position: absolute;
+    opacity:.5;
+    left:-50%;
+    top:-80%;
+    width:126%;
+    height:126%;
+    background: url(../img/about/flying-cloud.png) no-repeat 100%;
+    background-size:contain;
+    animation:cloud 15s steps(1000) infinite;
+}
+.info-detail:after {
+    opacity:1;
+    animation:cloud 10s steps(1000) infinite;
+}
+@keyframes cloud{
+    0% {top:-80%; left:-50%}
+    50% {top:-0%; left:-0%;}
+    100% {top:-79%; left:-49%;}
+}
+
+#project03 .text-wrapper {
+    margin-left:-5rem;
+    margin-top:5rem;
+}/*scroll시 이동*/
+
+
+
+/*project03 *****************************************************/
+
+#project04 .img-wrapper{
+    background:url(../img/about/2.-Enhances-Your-Flexibility.gif) no-repeat;
+    background-size:contain;
+    height:35rem;
+    left:45%;
+}
+#project04 .text-wrapper {
+    left:7%;
+    top:4rem;
+    text-align: right;
+}
+
+#project05 .center-img {
+    background:url(../img/about/flying-spine.jpg) no-repeat;
+    background-size:contain;
+    left:55%;
+    transform: translateX(-50%);
+}
+#project05 .center-img:before{
+    content:"";
+    background:url(../img/about/img_shadow1.png) no-repeat;
+    background-size:contain;
+    position:absolute;
+    outline:2px solid aqua;
+    width:150%;
+    height:130%;
+    top:1%;
+    left:-4rem;
+    z-index: -1;
+}
+
+#project06 .img-wrapper{
+    background:url(../img/about/flying-stress.jpg) no-repeat;
+    background-size:contain;
+    height:35rem;
+    left:0
+}
+#project06 .text-wrapper {
+    left:50%;
+    top:5rem;
+    transform:translateX(-5%);
+}
+#project07 .img-wrapper{
+    background:url(../img/about/12.-Weight-Loss.gif) no-repeat;
+    background-size:contain;
+    height:45rem;
+    left:50%;
+}
+#project07 .text-wrapper {
+    left:10%;
+    top:5rem;
+    text-align: right;
+}
+
+.left-text {
+    left:0;
+}
+.side-text {
+    font-family: futura;
+    position:relative;
+    top:10rem;
+    width:8%;
+    float:left;
+    writing-mode:vertical-rl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*menu-slideInUp*/
+.menu-slideInUp {
+    position:relative;
+}
+.footer-bcg {
+    min-height:14rem;
+    position:relative;
+    left:0;
+    bottom:0;
+    background:url(../img/common/footer/before-you-come.jpeg) no-repeat 50%;
+    background-size:cover;
+    z-index: 1;
+}
+.footer-bcg:after {
+    content:"";
+    width:100%;
+    min-height:14rem;
+    position:absolute;
+    left:0;
+    bottom:0;
+    background:linear-gradient(to top, rgba(255,255,255,0.3),rgba(255,255,255,0.8), rgba(255,255,255,0.9),rgba(255,255,255,1));
+    z-index: 2;
+} 
+.menu-slideInUp .content-wrapper {
+    min-width:100%;
+    position: absolute;
+    left:50%;
+    padding-left:2%;  /*가운데정렬 안먹혀서*/
+    bottom:1rem;
+    transform:translateX(-50%);
+    z-index: 3;
+/*    outline:2px solid green;*/
+}
+.menu-slideInUp li {
+    list-style:none;
+    display:inline-block;
+    opacity:0;
+    transform:translateY(10rem);
+/*    border:2px solid blue;*/
+    transition: all 1.5s cubic-bezier(.23,1,.32,1);
+}
+.menu-slideInUp li a {
+    font: 4rem futura;
+    font-weight: bold;
+    padding:0 1.2rem;
+    text-decoration: none;
+    color:#111;
+    opacity:.85;
+    letter-spacing: -0.2rem;
+    transition:all .3s ease-out;
+}
+.menu-slideInUp li.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.menu-slideInUp .content-wrapper:hover a:not(:hover) {
+    color:rgba(0,0,0,.3);
+}
+
+
+/* =Footer */
+.footer-container {
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 1);
+    background:linear-gradient(to bottom, #000, #111, #111, #000); 
+    position:relative;
+    width:100vw;
+    min-height:19rem;
+    padding-top:2rem;
+    letter-spacing: 0.1rem;
+    box-shadow: -0.1rem -0.1rem 2rem #000; 
+    z-index: 1;
+}
+.footer-container .wrapper {
+    width: 50%;
+    max-width: none;
+    margin:0 auto; 
+    text-align: center;
+    font-family:futura;
+}
+.textLogo, .imgLogo {
+    display:block;
+    margin:1.5rem auto 0;
+}
+.imgLogo {
+    width:3rem;
+}
+.footer-container h3 {
+    margin: .5rem auto 0;
+    font-size:1.3rem;
+    
+}
+.footer-container a {
+    color: rgba(255, 255, 255, 1); 
+    text-decoration: none;
+    font-family:futura;
+    font-weight: bold;
+    font-size:1.3rem;
+}
+.footer-container ul {
+    margin:2rem 0 0 0;
+    padding:0;
+}
+.footer-container li{
+    list-style:none;
+    display:inline-block;
+    margin:0 1rem;
+    padding:0.5px 2px;
+/*    border-bottom:.1rem solid rgba(255, 255, 255, 1);*/
+}
+
+
+
+
+
+
+
+
+
+
+/*
+수정용 */
+
+*{outline:none !important; }
+.project{border:none !important;}
+:before, :after {outline:none !important; }
+
+/*
+.project {outline:5px solid red !important;}
+.project-wrapper {outline:2px solid royalblue !important;}
+
+*/
+
+
+

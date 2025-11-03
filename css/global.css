@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Futura light Regular;
+    src: url(Futura Light Regular.otf);
+}
+
+@font-face {
+    font-family: Futura Medium;
+    src: url(Futura Medium.otf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(Futura Bold.otf);
+}
+
+@font-face {
+    font-family: Libre Baskerville-Regular;
+    src: url(LibreBaskerville-Regular.ttf);
+}
+
+@font-face {
+    font-family: Libre Baskerville-Italic;
+    src: url(LibreBaskerville-Italic.ttf);
+}
+
+@font-face {
+    font-family: Libre Baskerville-Bold;
+    src: url(LibreBaskerville-Bold.ttf);
+}

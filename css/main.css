@@ -1,0 +1,814 @@
+#section1 {
+    background:url(../img/main/slide/sld1.jpg) no-repeat 50%;
+    background-size:contain;
+}
+#section2 {
+    background:url(../img/main/slide/sld2.jpg) no-repeat top;
+    background-size:contain;
+}
+#section3 {
+    background:url(../img/main/slide/sld3.jpg) no-repeat 50%;
+    background-size:contain;
+}
+
+body {
+  font-size: 62.5%/1.5;
+  font-family: Futura Medium, 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif } 
+/* 62.5% = 10px, 1.4em = 14px */
+
+/* Make the body 100% of the browser viewport height */
+html, body {
+  width:100vw;    
+  height: 100%;
+  margin: 0; 
+  font-size: 1vw;
+  user-select:none;
+}
+h1 {
+  font-size: 6rem; 
+  /*outline:2px solid red;*/
+  line-height:5rem;
+  letter-spacing:-0.3rem;
+  margin-top: 3rem;
+  font-family: futura, 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif;
+  font-weight: bolder; 
+    background
+}
+
+p {
+    font: 1.2rem Libre Baskerville-Regular, Helvetica, Helvetica Neue, Arial, sans-serif; 
+}
+a{
+    text-decoration: none;
+}
+
+/*로딩페이지*/
+#preLoader {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index: 1000;
+}
+#loader-logo{
+    display:block;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translateX(-50%) translateY(-50%);
+    z-index: 1001;
+}
+.loader-section {
+    position:fixed;
+    top:0;
+    width:51%;
+    height:100%;
+    background:#000;
+    z-index: 1000;
+}
+.loader-section.section-left{
+    left:0;
+}
+.loader-section.section-right{
+    right:0;
+}
+
+/*Loaded ******************************************************/
+.loaded #preLoader .loader-section.section-left {
+    transform:translateX(-100%);
+    transition:all .8s .8s cubic-bezier(.645,.045,.355,1);
+}
+.loaded #preLoader .loader-section.section-right {
+    transform:translateX(100%);
+    transition:all .8s .8s cubic-bezier(.645,.045,.355,1);
+}
+.loaded #loader-logo {
+    opacity:0;
+    transition:all .6s ease-out;
+}
+.loaded #preLoader {
+    visibility: hidden;
+    transform:translateY(-100%);
+    transition:all .8s 1.6s ease-out;
+}
+
+/* header 항상 fixed, 슬라이드끝나면 url black으로 변경 */
+#nav-container {
+    position:fixed;
+    width:100%;
+    z-index: 998;
+}
+#header {
+    position:relative;
+    width:100%;
+    top:0;
+    height:5rem;
+    transition: all 1s cubic-bezier(.23,1,.32,1);
+}
+#header.open {
+    z-index: 9999;
+}
+#header #logo{
+    position:absolute;
+    min-width:325px;
+    min-height:45px;
+    top:53%;
+    transform:translateY(-50%);
+    left:2%;
+    background:url(../img/common/logo-svg-w_notm.svg) no-repeat top left;
+    transition: all 1s cubic-bezier(.23,1,.32,1);
+/*    outline:1px solid grey;*/
+}
+#header #and-menu{
+    position:fixed;
+    min-width:34px;
+    min-height:39px;
+    top:5%;
+    transform:translateY(-50%);
+    right:3%;
+    background:url(../img/common/and-w.svg) no-repeat top right;
+    transition: all 1s cubic-bezier(.23,1,.32,1);
+    z-index: 9999;
+}
+#header #logo.scroll{
+    background:url(../img/common/logo-svg-bk_notm.svg) no-repeat top left;
+}
+#header #logo.open {
+    opacity:0;
+}
+#header #and-menu.open {  /*training.html에서는 보이는데 main.html에서는 왜 안보여???*/
+    background:url(../img/common/and-w.svg) no-repeat top right;
+}
+#header #and-menu.scroll{
+    background:url(../img/common/and-bk.svg) no-repeat top right;
+}
+
+
+/* modal.css linked*/
+
+
+/* non-scroll section */
+#section1 .slide-container {
+    position:relative;
+    width:85%;
+    margin:0 auto;
+    top:6%;
+}
+#section2 .slide-container,
+#section3 .slide-container{
+    position:relative;
+    width:75%;
+    margin:0 auto;
+    top:5%;
+    
+}
+.op1, .op2, .op3 {cursor:move;}
+.op1 {opacity:1; }
+.op1:hover {opacity:.4;}
+.op2 {opacity:.6; }
+.op2:hover {opacity:1;}
+.op3 {opacity:.4; }
+.op3:hover {opacity:1;}
+.non-scroll .slide-container>*{
+    color:white;
+    transform:translateY(100%);
+    transition:all 1s;
+/*    outline:1px solid aqua;*/
+}
+.section.active .slide-container>* {
+    transform:translateY(0);
+}
+.non-scroll h2 {
+    font-size:2.6rem;
+    color:rgba(255,255,255,.7);
+    text-align: right;
+    letter-spacing:1rem;
+    line-height:2rem;
+    margin-right:2rem;
+}
+.non-scroll .exp {
+    font-size:1.2rem;
+}
+#section1 .big-button {
+    position:absolute;
+    top:0;
+    margin-top:-5%;
+    right:2rem;
+}
+#section1 h1 {
+    font-family:futura medium;
+    font-weight: bolder;
+    font-size: 4.2rem;
+    letter-spacing:1.5rem;
+    text-align: center;
+}
+#section2 h1, 
+#section3 h1 {
+    font-size: 5.2rem; 
+    line-height:2rem;
+    letter-spacing:-0.1rem;
+    font-family: Futura;
+}
+#section2 .big-button,
+#section3 .big-button{
+    position:absolute;
+    bottom:0;
+    margin-bottom:-8%;
+    left:0;
+}
+.section1-button{
+    font-family: futura medium;
+    font-weight:bold;
+    font-size:3.5rem;
+    color:rgba(255,255,255,.3);
+    line-height:0;
+    padding:1.2rem;
+    text-align:center;
+    position:relative;
+    letter-spacing: .1rem;
+}
+.section2-button, 
+.section3-button{
+    font-family: futura medium;
+    font-weight:bold;
+    font-size:1.1rem;
+    letter-spacing: .5rem;
+    color:rgba(255,255,255,.3);
+    line-height:0;
+    padding:2rem;
+    text-align:center;
+    position:relative;
+}
+.slide-button:after {
+    content:"";
+    border:.5rem solid rgba(255,255,255,.3);
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    top:0;
+    left:0;
+    position:absolute;
+    display:none;
+}
+.slide-button:hover {
+    color:rgba(255,255,255,1);
+}
+.slide-button:hover:after{
+    display:block;
+}
+
+/* scrollable section**********************************/
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 100vw;
+    position: relative;
+    z-index: 2;
+}
+.project {
+    position:relative;
+    min-width:100vw;
+    margin: 0 auto;
+    padding: 3rem 0;
+    border-bottom: 1px #ebebeb solid; /* project 끼리 나눠서볼수있게 하려고 임시로함*/
+    opacity: 0;
+    transform:translateY(10rem);
+    /*border:2px solid blue;*/
+    transition: all 1.5s cubic-bezier(.23,1,.32,1);
+}
+.project.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.project .img-wrapper img {
+   width:50vw;
+   
+}
+.project p {
+    color:#999;
+}
+.project .square {
+    width:1.3rem;
+    height:1.3rem;
+    background-color:#000;
+    color:#000;
+    display:block;
+    margin:7rem 0;
+}
+.hexa-shadow {
+    background:url(../img/main/happy/happy-hexa-shadow.png) no-repeat;
+    position:relative;
+    width:400px;
+    height:400px;
+    display:block;
+    z-index: -1;
+}
+.hexagon { /* 빨간놈 */
+    background:url(../img/main/happy/happy-hexa-red.png) no-repeat;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: 2;
+    animation:moving 5s steps(100) infinite;
+}
+@keyframes moving {
+    0%{margin-top:0; margin-left:0;}
+    50%{margin-top:-.5rem; margin-left:-.5rem;}
+    100%{margin-top:0rem; margin-left:0;}
+}
+
+#project01 .hexa-shadow {
+    right:-5rem;
+    top:-15rem;
+    float:right;
+}
+#project01 .hexa-right {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:-2rem;
+    left:-.3rem;
+}
+#project03 .hexa-shadow {
+    top:-45rem;
+    left:-5rem;
+    transform:rotate(90deg);
+    float:left;
+    outline:2px solid red;
+}
+#project03 .hexa-left {
+    top:-2.3rem;
+    left:-1rem;
+}
+.button-left, .button-right {
+    position:absolute;
+}
+.button {
+    text-decoration: none;
+    cursor:pointer;
+    font-size:1.2rem;
+    font-family: futura medium;
+    font-weight:bold;
+    letter-spacing:0.3rem;
+    background-color:#111;
+    color:#ebebeb;
+    position:relative;
+    padding:2rem 3rem;
+    text-align:center;
+    font-style: normal;
+    transition:all .5s cubic-bezier(.23,1,.32,1);
+    z-index: 1;
+}
+/* 
+.button:before {
+    content:"";
+    background-color:#ebebeb;
+    width:0;
+    height:0;
+    box-sizing: border-box;
+    left:20%;
+    top:50%;
+    transform:translateY(-50%);
+    position:absolute;
+    display:none;
+    transition:all 2s ease-out;
+}
+*/
+/* border */
+.button:after { 
+    content:"";
+    background-color: transparent;
+    width:100%;
+    height:0%;
+    box-sizing: border-box;
+    bottom:0;
+    left:0;
+    position:absolute;
+    display:block;
+    transition:all .5s cubic-bezier(.23,1,.32,1);
+    z-index: -1;
+}
+.button:hover {
+    background-color:transparent;
+}
+.button-left:hover .button:after {
+    height:100%;
+    background-color:#84ab4d;
+}
+.button-right:hover .button:after {
+    height:100%;
+    background-color:#be646b;
+}
+
+.project .img-wrapper {
+    position:relative;
+    min-width:50vw;
+    z-index: 1;
+
+}
+.project>.img-wrapper:before {
+    content:"";
+    background:url(../img/main/happy/happy-shadow.png) no-repeat;
+    background-size:contain;
+    position:absolute;
+    z-index: -1;
+    outline:2px solid aqua;
+    width:150%;
+    height:150%;
+    top:0;
+    left:0;
+}
+#project01 .img-wrapper {
+}
+#project01 .img-wrapper:before {
+    width:180%;
+    height:160%;
+    top:-8rem;
+    left:-2rem;
+}
+#project02 .img-wrapper {
+    transform:translateX(50%);
+    top:-35rem;
+}
+#project02 .img-wrapper:before {
+    top:-11rem;
+    left:-13rem;
+}
+
+.info-detail:after {
+    content:"";
+    position: absolute;
+    left:-13%;
+    top:-13%;
+    width:126%;
+    height:126%;
+    background: url(../img/main/flying/flying-cloud.png);
+    outline:2px solid aqua;
+}
+
+/************** project 01 ******** HAPPY BODY */
+#project01 h1 {
+    text-align: center;
+}
+#project01 .info1{
+    margin:10rem auto 10rem;
+    font-size:1.5rem;
+    position:relative;
+    z-index: 1;
+    text-align: center;
+    color:#222;
+}
+#project01 .info1:before {
+    position:absolute;
+    content:"#";
+    font-family:futura;
+    font-weight:600;
+    font-size:16rem;
+    color:rgb(120, 191, 211);
+    opacity:0.3;
+    top:15%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index: -1;
+}
+#project01 .square-center {
+    margin:7rem auto;
+}
+.info-center {
+    max-width: 90vw;
+    font-size:1.2rem;
+    line-height:3rem;
+    text-align: center;
+    margin:10rem auto 5rem;
+    position:relative;
+}
+
+/************** project 02 ******** flying */
+#project02 {
+    padding-left:10rem;
+    padding-top:5rem;
+    padding-bottom:0;
+}
+#project02 h1 {
+    position:relative;
+    z-index: 1;
+}
+#project02 h1:before{
+    content:"?";
+    position:absolute;
+    font-family: symbol;
+    font-weight: bold;
+    font-size:25rem;
+    color:#f1f1f1;
+    z-index: -1;
+    left:38rem;
+    top:4.5rem;
+}
+
+.info-left {
+    text-align: right;
+    margin:0 auto;
+    max-width: 40vw;
+    margin-left:0;
+    font-size:1.2rem;
+    line-height:3rem;
+    position:relative;
+}
+
+.info-left:after {
+    position:absolute;
+    left:5rem;
+    top:0;
+    width:100%;
+    height:100%;
+}
+.button-left {
+    bottom:25rem;
+    left:23rem;
+}
+
+/************** project 03 ******** Classes */
+#project03 {
+    height:100%;
+    padding:5rem 0 15rem;
+}
+#project03 h1{
+    text-align: right;
+    margin-right:10rem;
+}
+#project03 .square-right {
+    margin:7rem auto;
+    margin-right:10rem;
+}
+.project03-img {
+    background:url(../img/main/class/class-main.jpg) no-repeat 50%;
+    filter:grayscale(100%) contrast(80%);
+    background-size:cover;
+    min-width:100vw;
+    height:30rem;
+}
+.class {
+/*    outline:2px solid tomato;*/
+    position:relative;
+    max-width: 80vw;
+    min-height: 40vh;
+    opacity:0;
+    margin:0 auto;
+    transition:all 3s cubic-bezier(.23,1,.32,1);
+    
+}
+.class01, .class03 {
+    transform:translate(-10rem, -2rem)
+}
+.class02, .class04 {
+    transform:translate(10rem, -2rem)
+}
+.class.fade-in {
+    opacity: 1;
+    transform:translate(0)
+}
+.class .img-wrapper {
+    position:relative;
+    width:30vw;
+    height:45vh;
+    left:50%;
+    transform:translateX(-30%);
+    z-index: 1;
+    outline:1px solid blue;
+}
+.class .img-wrapper:before {
+    content:"";
+    background:url(../img/main/happy/happy-shadow.png) no-repeat;
+    background-size:contain;
+    position:absolute;
+    z-index: -1;
+    outline:2px solid aqua;
+    width:80%;
+    height:120%;
+    top:0;
+    left:0;
+}
+.class .img-wrapper img{
+    max-width:30vw;
+}
+
+.class01 .img-wrapper{
+    margin-top:-1rem;
+    margin-left:-10rem;
+}
+.class01 .content-wrapper {
+    outline:1px solid grey;
+    z-index: 1;
+}
+.class01 .img-wrapper:before {
+    left:-4rem;
+    top:-1rem;
+}
+.class02 .img-wrapper{
+    margin-top:-3.5rem;
+    margin-left:13rem;
+}
+.class02 .img-wrapper:before {
+    left:-4rem;
+    top:-2rem;
+}
+.class02 .content-wrapper {
+}
+.class03 .img-wrapper{
+    margin-left:-6rem;
+    margin-top:-3rem;
+}
+.class03 .img-wrapper:before {
+    left:-5rem;
+    top:-2rem;
+}
+.class03 .content-wrapper {
+    right:.1rem;
+}
+.class04 .img-wrapper{
+    margin-left:10rem;
+}
+.class04 .img-wrapper:before {
+    left:-4rem;
+    top:-1em;
+}
+.class04 .content-wrapper {
+}
+.class-left {
+    left:5rem;
+}
+.class-right {
+    right:5rem;
+}
+.class .content-wrapper {
+    font-size: 1rem;
+    position:absolute;
+    width:30vw;
+    margin-top:5rem;
+    top:0;
+    text-align: center;
+}
+.class .content-wrapper h2 {
+    font: 1.5rem futura;
+    margin:0;
+    padding:0;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+}
+.class .number{
+    font-style: italic;
+}
+.textSeparate {
+    width:11rem;
+    height:0.2rem;
+    background-color:#eee;
+    display: block;
+    transform:translateX(-50%);
+    margin:1rem 50%;
+}
+.class .content-wrapper p {
+    margin:.8rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+.button-right {
+    bottom:5rem;
+    right:20rem;
+    
+}
+
+/*menu-slideInUp*/
+.menu-slideInUp {
+    position:relative;
+}
+.footer-bcg {
+    min-height:14rem;
+    position:relative;
+    left:0;
+    bottom:0;
+    background:url(../img/common/footer/before-you-come.jpeg) no-repeat 50%;
+    background-size:cover;
+    z-index: 1;
+}
+.footer-bcg:after {
+    content:"";
+    width:100%;
+    min-height:14rem;
+    position:absolute;
+    left:0;
+    bottom:0;
+    background:linear-gradient(to top, rgba(255,255,255,0.3),rgba(255,255,255,0.8), rgba(255,255,255,0.9),rgba(255,255,255,1));
+    z-index: 2;
+} 
+.menu-slideInUp .content-wrapper {
+    min-width:100%;
+    position: absolute;
+    left:50%; 
+    padding-left:2%; /*가운데정렬 안먹혀서*/
+    bottom:1rem;
+    transform:translateX(-50%);
+    z-index: 3;
+    outline:2px solid green;
+}
+.menu-slideInUp li {
+    list-style:none;
+    display:inline-block;
+    opacity:0;
+    transform:translateY(10rem);
+    /*border:2px solid blue;*/
+    transition: all 1.5s cubic-bezier(.23,1,.32,1);
+}
+.menu-slideInUp li a {
+    font: 4rem futura;
+    font-weight: bold;
+    padding:0 1.2rem;
+    text-decoration: none;
+    color:#111;
+    opacity:.85;
+    letter-spacing: -0.2rem;
+    transition:all .3s ease-out;
+}
+.menu-slideInUp li.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-slideInUp .content-wrapper:hover a:not(:hover) {
+    color:rgba(0,0,0,.3);
+}
+
+
+/* =Footer */
+.footer-container {
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 1);
+    background:linear-gradient(to bottom, #000, #111, #111, #000); 
+    position:relative;
+    width:100vw;
+    min-height:19rem;
+    padding-top:2rem;
+    letter-spacing: 0.1rem;
+    box-shadow: -0.1rem -0.1rem 2rem #000; 
+    z-index: 1;
+}
+.footer-container .wrapper {
+    width: 50%;
+    max-width: none;
+    margin:0 auto; 
+    text-align: center;
+    font-family:futura;
+}
+.textLogo, .imgLogo {
+    display:block;
+    margin:1.5rem auto 0;
+}
+.imgLogo {
+    width:3rem;
+}
+.footer-container h3 {
+    margin: .5rem auto 0;
+    font-size:1.3rem;
+    
+}
+.footer-container a {
+    color: rgba(255, 255, 255, 1); 
+    text-decoration: none;
+    font-family:futura;
+    font-weight: bold;
+    font-size:1.3rem;
+}
+.footer-container ul {
+    margin:2rem 0 0 0;
+    padding:0;
+}
+.footer-container li{
+    list-style:none;
+    display:inline-block;
+    margin:0 1rem;
+    padding:0.5px 2px;
+/*    border-bottom:.1rem solid rgba(255, 255, 255, 1);*/
+}
+
+
+
+
+/*보기용*/
+
+*{outline:none !important; }
+.project{border:none !important;}
+:before, :after {outline:none !important; }
+
+
+
+
+
+
+
+
+
+
+

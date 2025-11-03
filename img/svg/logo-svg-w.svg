@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="325px"
+	 height="35px" viewBox="0 0 325 35" style="enable-background:new 0 0 325 35;" xml:space="preserve">
+    <defs>
+        <style>
+           .st0{display:inline;stroke:#000000; }
+	       .st1{font-size:22.5;}
+	       .st2{letter-spacing:10;}
+	       .st3{fill:#ffffff } <!-- ream, live-->
+	       .st4{display:inline;}
+	       .st5{font-family:'Futura';}
+	       .st6{fill:#ffffff;stroke:#FFFFFF;stroke-miterlimit:10; }<!-- D, A-->
+	       .st7{display:none;} 
+            
+            <!-- D, A-->
+           .st3, .st6 {
+                animation:draw 6s ease-in-out 1;
+            }
+           .st3 { animation-duration: 9s;}
+            @keyframes draw{
+                0% {
+                    stroke-dasharray: 0 700;
+                    stroke-dashoffset: -100;
+                    fill-opacity: 0;
+                    stroke-width: 1;
+                }
+                37% {
+                    stroke-dasharray: 300 0;
+                    stroke-dashoffset: 0;
+                    fill-opacity: 0;
+                    stroke-width: 1;
+                }
+                50% {
+                    fill-opacity: 1;
+                    stroke-width: 1;
+                }
+                100% {
+                    fill-opacity: 1;
+                    stroke-width: 1;
+                }
+            
+            }
+        </style>
+        <script type="text/javascript">
+            document.ready(function(){
+                
+            });
+        </script>
+    </defs>
+<g id="Layer_1">
+	<text transform="matrix(1 0 0 1 37.9995 25.667)" class="st7"><tspan x="0" y="0" class="st0 st5 st1 st2">D</tspan><tspan x="25.087" y="0" class="st4 st5 st1 st2">REAM</tspan><tspan x="124.492" y="0" class="st0 st5 st1 st2"> A</tspan><tspan x="167.061" y="0" class="st4 st5 st1 st2">LIVE</tspan></text>
+	<g class="st7">
+		<path class="st0" d="M39.44,8.697h3.511c5.199,0,9.52,2.746,9.52,8.395c0,5.784-4.231,8.575-9.588,8.575H39.44V8.697z
+			 M41.556,23.731h0.743c4.321,0,8.057-1.62,8.057-6.549c0-4.952-3.736-6.55-8.057-6.55h-0.743V23.731z"/>
+		<path class="st4" d="M66.823,18.487v7.18h-2.116V8.697h2.565c1.508,0,3.128,0.022,4.479,0.788
+			c1.418,0.833,2.228,2.431,2.228,4.051c0,2.431-1.62,4.457-4.074,4.75l5.357,7.382h-2.566l-4.997-7.18l0-1.757
+			C69.803,16.704,72,16.242,72,13.626c0-2.656-2.521-3.039-4.614-3.039h-0.563v6.145"/>
+		<path class="st4" d="M89.166,17.317v6.415h7v1.936H87.05V8.697h9.115v1.936h-7v4.749"/>
+		<path class="st4" d="M111.306,21.413l-1.936,4.254h-2.273l8.103-17.69l8.103,17.69h-2.273l-5.829-13.054L111.306,21.413z
+			 M111.306,21.413l3.894-8.8L111.306,21.413"/>
+		<path class="st4" d="M137.72,14.458h-0.045l-1.981,11.208h-2.183l3.466-17.69l5.829,13.369l5.829-13.369l3.466,17.69h-2.183
+			l-1.981-11.208h-0.045l-5.086,11.569L137.72,14.458z"/>
+		<path class="st0" d="M183.146,21.413l-1.936,4.254h-2.272l8.103-17.69l8.102,17.69h-2.272l-1.936-4.254H183.146z M187.041,12.613
+			l-3.017,6.864h6.032L187.041,12.613z"/>
+		<path class="st4" d="M208.797,23.731h5.154v1.936h-7.271V8.697h2.116V23.731z"/>
+		<path class="st4" d="M227.518,25.667h-2.116V8.697h2.116V25.667z"/>
+		<path class="st4" d="M246.418,21.256l5.042-12.559h2.317l-7.359,17.871l-7.382-17.871h2.317L246.418,21.256z"/>
+		<path class="st4" d="M265.338,8.697h9.115v1.936h-6.999v4.749h6.797v1.936h-6.797v6.415h6.999v1.936h-9.115V8.697z"/>
+	</g>
+	<g id="Layer_2" class="st7">
+	</g>
+	<g>
+		<path class="st6" d="M5.586,6.715h4.68c6.93,0,12.689,3.66,12.689,11.189c0,7.71-5.64,11.43-12.779,11.43h-4.59V6.715z
+			 M8.406,26.754h0.99c5.76,0,10.739-2.16,10.739-8.729c0-6.6-4.979-8.729-10.739-8.729h-0.99V26.754z"/>
+		<path class="st3" d="M43.266,17.422c2.88,0,5.729-0.538,5.729-4.138c0-3.54-3.36-4.05-6.149-4.05h-0.75v8.189v2.339v9.57h-2.82
+			V6.715h3.419c2.01,0,4.17,0.03,5.97,1.05c1.89,1.11,2.97,3.24,2.97,5.4c0,3.24-2.16,5.94-5.43,6.33l7.14,9.84h-3.42l-6.66-9.57
+			 M43.266,19.764L43.266,19.764v-2.341"/>
+		<path class="st3" d="M71.886,18.205v8.549h9.33v2.58H69.066V6.715h12.149v2.58h-9.33v6.33V18.205z"/>
+		<path class="st3" d="M106.596,11.935l7.77,17.399h3.03l-10.8-23.579l-10.8,23.579h3.03l3.75-8.25L106.596,11.935L106.596,11.935"
+			/>
+		<path class="st3" d="M136.626,14.395h-0.061l-2.64,14.939h-2.91l4.62-23.579l7.77,17.819l7.77-17.819l4.62,23.579h-2.91
+			l-2.64-14.939h-0.06l-6.78,15.419L136.626,14.395z"/>
+		<path class="st6" d="M197.195,23.664l-2.58,5.67h-3.03l10.8-23.579l10.8,23.579h-3.03l-2.58-5.67H197.195z M202.385,11.935
+			l-4.02,9.149h8.039L202.385,11.935z"/>
+		<path class="st3" d="M231.395,26.754h6.87v2.58h-9.689V6.715h2.819V26.754z"/>
+		<path class="st3" d="M256.354,29.334h-2.819V6.715h2.819V29.334z"/>
+		<path class="st3" d="M281.555,23.454l6.72-16.739h3.09l-9.81,23.819l-9.84-23.819h3.09L281.555,23.454z"/>
+		<path class="st3" d="M309.604,18.205v8.549h9.33v2.58h-12.149V6.715h12.149v2.58h-9.33v6.33V18.205z"/>
+	</g>
+	<text transform="matrix(1 0 0 1 37.9995 25.667)" class="st7"><tspan x="0" y="0" class="st0 st5 st1 st2">D</tspan><tspan x="25.087" y="0" class="st4 st5 st1 st2">REAM</tspan><tspan x="124.492" y="0" class="st0 st5 st1 st2"> A</tspan><tspan x="167.061" y="0" class="st4 st5 st1 st2">LIVE</tspan></text>
+	<text transform="matrix(1 0 0 1 37.9995 25.667)" class="st7"><tspan x="0" y="0" class="st0 st5 st1 st2">D</tspan><tspan x="25.087" y="0" class="st4 st5 st1 st2">REAM</tspan><tspan x="124.492" y="0" class="st0 st5 st1 st2"> A</tspan><tspan x="167.061" y="0" class="st4 st5 st1 st2">LIVE</tspan></text>
+	<path class="st3" d="M43.266,19.764"/>
+	<path class="st3" d="M43.266,19.764"/>
+</g>
+<g id="Layer_3">
+</g>
+</svg>
